@@ -1,29 +1,38 @@
 <template>
-  <div id="app">
-    <h1>Vue.js</h1>
-    <HelloWeb/>
+  <div class="app">
+    <Header/>
+    <Serbar/>
+    <Noload/>
   </div>
 </template>
 
 <script>
-import HelloWeb from './components/HelloWeb.vue'
+import Header from './components/Header.vue'
+import Serbar from './components/Serbar.vue'
+import Noload from './components/Noload.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWeb
+    Header,
+    Serbar,
+    Noload
   }
 }
 </script>
 
 <style>
-* {
-    background: #000;
-}
-#app {
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: #2491ff;
-  margin-top: 60px;
+  color: #fefefe;
+}
+
+*::selection, *::-moz-selection, *::selection, *::-moz-selection {
+  color: #fefefe;
+  background: #ec1d24;
 }
 </style>
